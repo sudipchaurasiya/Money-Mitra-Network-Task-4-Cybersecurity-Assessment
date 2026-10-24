@@ -1,0 +1,8 @@
+Type,Indicator,First Observed,Packet Evidence,Status,Notes
+IP and Port,107.175.82.242:9000,189.451928 seconds,23091 and 24916,Confirmed observation,HTTP GET requested runner_ilove.exe and HTTP 200 response observed; maliciousness not confirmed
+File,runner_ilove.exe,2026-10-01 15:30:36 -0400,23091 and 24916,Confirmed observation,PE32+ Windows executable; file was not executed
+SHA256,b789adce70c028a6d17be45ec34667aa95586350ee0c4057e75b138b1ad35061,File verification,Recovered file hash,Confirmed file hash,Hash identifies the recovered file but does not prove maliciousness
+Domain,holtandberyl.com,92.641104 seconds,8228 8235 8238 8345 8347,Unverified lead,Requests to /prw and /crv returned HTTP redirects to HTTPS
+IP,35.170.55.9,92.815468 seconds,8230 8235 8238 8345 8347,Unverified lead,DNS resolution and HTTP traffic observed; purpose not established
+IP and Port,195.63.128.106:443,196.974101 seconds,Stream 130 and related packets,Unresolved lead,Long encrypted connection; application purpose and maliciousness unverified
+Domain,wpad.natureforce.com,Early in capture,Packet 32 and repeated DNS responses,Inconclusive,Repeated NXDOMAIN responses may be caused by normal proxy discovery

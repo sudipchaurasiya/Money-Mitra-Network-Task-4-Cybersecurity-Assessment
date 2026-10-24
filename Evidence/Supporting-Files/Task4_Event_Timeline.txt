@@ -1,0 +1,78 @@
+TASK 4 - NETWORK INVESTIGATION EVENT TIMELINE
+
+Source PCAP:
+2026-10-01-traffic-analysis-exercise.pcap
+
+PCAP SHA-256:
+287d6dee90cfef71f98a97c42e30444608de2cf59d2f7392a0a6df8dbbc8274b
+
+Internal client:
+10.10.1.128
+
+Note:
+Times below use the capture's recorded relative seconds or timestamp.
+The capture timezone shown in the evidence is -0400.
+
+EVENT 1 - DNS lookup
+Relative time: 92.641104 seconds
+Packet: 8228
+Observation: Client queried DNS for holtandberyl.com.
+Assessment: Domain lookup observed; purpose unverified.
+
+EVENT 2 - DNS response
+Relative time: 92.815468 seconds
+Packets: 8230-8231
+Observation: DNS response associated holtandberyl.com with 35.170.55.9.
+Assessment: Resolution observed; reputation and purpose not established.
+
+EVENT 3 - HTTP request to /prw
+Relative time: 92.949426 seconds
+Packet: 8235
+Observation: Client requested /prw from holtandberyl.com over HTTP.
+Assessment: Request observed; suspiciousness not established by the path alone.
+
+EVENT 4 - HTTP redirect
+Relative time: 93.024330 seconds
+Packet: 8238
+Observation: Server returned HTTP 301 redirecting /prw to HTTPS.
+Assessment: Redirect observed.
+
+EVENT 5 - HTTP request to /crv
+Relative time: 94.383042 seconds
+Packet: 8345
+Observation: Client requested /crv from holtandberyl.com over HTTP.
+Assessment: Request observed; purpose unverified.
+
+EVENT 6 - HTTP redirect
+Relative time: 94.453762 seconds
+Packet: 8347
+Observation: Server returned HTTP 301 redirecting /crv to HTTPS.
+Assessment: Redirect observed.
+
+EVENT 7 - Executable download request
+Timestamp: 2026-10-01 15:30:36.806810 -0400
+Relative time: 189.451928 seconds
+Packet: 23091
+Observation: Client requested /wilow/runner_ilove.exe from 107.175.82.242 on TCP port 9000.
+Assessment: Executable download request confirmed in the capture.
+
+EVENT 8 - HTTP success response
+Timestamp: 2026-10-01 15:30:38.580040 -0400
+Packet: 24916
+Observation: HTTP 200 response for /wilow/runner_ilove.exe with Content-Length 1646592 bytes.
+Assessment: Successful HTTP response observed. This alone does not prove complete file delivery, execution, or maliciousness.
+
+EVENT 9 - Long encrypted connection
+Timestamp: 2026-10-01 15:30:44.328983 -0400
+Packet: 24963; TCP stream 130
+Endpoint: 195.63.128.106:443
+Observation: TCP connection established and substantial encrypted traffic followed.
+Conversation summary: 15,595 packets, approximately 14 MB, about 2,233.64 seconds.
+Assessment: Investigation lead. Application purpose and maliciousness remain unverified.
+
+FILE VERIFICATION
+The recovered runner_ilove.exe and runner_from_pcap.exe files were reported to have matching SHA-256:
+b789adce70c028a6d17be45ec34667aa95586350ee0c4057e75b138b1ad35061
+
+Safety note:
+The executable was not run. The available evidence does not establish that the executable is malicious or that the long encrypted connection is related to the download.

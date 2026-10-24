@@ -1,0 +1,25 @@
+Task 4 - Third Network Observation
+
+Capture:
+2026-10-01-traffic-analysis-exercise.pcap
+
+Internal client:
+10.10.1.128
+
+Remote endpoint:
+195.63.128.106:443
+
+TCP stream:
+130
+
+Observed evidence:
+- TCP connection established.
+- TShark labels subsequent payload packets as SSL Continuation Data.
+- TCP conversation summary reports 15,595 packets.
+- Conversation summary shows approximately 14 MB and a duration of about 2,233.64 seconds (37 minutes 14 seconds).
+
+Assessment:
+Investigation lead only. The connection's duration and traffic volume warrant review, but the available evidence does not establish malicious activity, command-and-control, or data exfiltration. The application and purpose remain unverified.
+
+Recommended follow-up:
+Review any available TLS metadata, endpoint process logs, destination reputation from trusted sources, and the business purpose of the connection. Do not execute the downloaded executable or contact the remote endpoint.

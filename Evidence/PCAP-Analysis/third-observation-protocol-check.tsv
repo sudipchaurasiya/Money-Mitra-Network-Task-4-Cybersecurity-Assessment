@@ -1,0 +1,30 @@
+24963	TCP	63725 → 443 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+24967	TCP	443 → 63725 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1376 WS=256 SACK_PERM
+24968	TCP	63725 → 443 [ACK] Seq=1 Ack=1 Win=65280 Len=0
+24969	SSL	Continuation Data
+24970	SSL	Continuation Data
+24971	TCP	63725 → 443 [PSH, ACK] Seq=2753 Ack=1 Win=65280 Len=468
+24972	SSL	Continuation Data
+24973	SSL	Continuation Data
+24974	SSL	Continuation Data
+24975	SSL	Continuation Data
+24976	SSL	Continuation Data
+24977	SSL	Continuation Data
+24978	SSL	Continuation Data
+24979	TCP	443 → 63725 [ACK] Seq=1 Ack=1377 Win=1572864 Len=0
+24980	SSL	Continuation Data
+24981	SSL	Continuation Data
+24982	TCP	443 → 63725 [ACK] Seq=1 Ack=3221 Win=1572864 Len=0
+24983	SSL	Continuation Data
+24984	SSL	Continuation Data
+24985	SSL	Continuation Data
+24986	TCP	443 → 63725 [ACK] Seq=1 Ack=5973 Win=1572864 Len=0
+24987	SSL	Continuation Data
+24988	SSL	Continuation Data
+24989	SSL	
+24990	TCP	63725 → 443 [ACK] Seq=23861 Ack=1 Win=65280 Len=1376
+24991	TCP	443 → 63725 [ACK] Seq=1 Ack=8725 Win=1572864 Len=0
+24992	SSLv2	Encrypted Data, Continuation Data
+24993	SSL	Continuation Data
+24994	SSL	Continuation Data
+24995	SSL	Continuation Data

@@ -1,0 +1,15 @@
+Task 4 - Executable File Verification
+Date checked: 2026-10-23
+
+File type:
+/home/kali/Downloads/task3_objects/runner_ilove.exe: PE32+ executable for MS Windows 6.00 (GUI), x86-64, 8 sections
+
+SHA-256:
+b789adce70c028a6d17be45ec34667aa95586350ee0c4057e75b138b1ad35061  /home/kali/Downloads/task3_objects/runner_ilove.exe
+
+File metadata:
+Name: /home/kali/Downloads/task3_objects/runner_ilove.exe
+Size: 1646592 bytes
+Modified: 2026-10-18 12:42:14.056754558 -0400
+
+Safety note: File was not executed during this check.
